@@ -8,11 +8,27 @@ function EachCharacter({ character }) {
         <meta name="viewport" content="initial-scale=1.0, width=device-width" />
       </Head>
 
-      <figure>
-        <img src={character[0].img} alt={character[0].name} />
-      </figure>
+      <img
+        src="https://iconape.com/wp-content/png_logo_vector/breaking-bad.png"
+        className="max-h-40 m-auto"
+      />
 
-      <div>{character[0].nickname}</div>
+      <div className="text-center">
+        <div>
+          <img
+            src={character[0].img}
+            alt={character[0].name}
+            width="700px"
+            className=" m-auto"
+          />
+        </div>
+        <h2 className="mt-4 font-bold text-xl text-gray-700">
+          {character[0].nickname}
+        </h2>
+        <h3 className="text-sm font-normal text-gray-500">
+          Played By {character[0].portrayed}
+        </h3>
+      </div>
     </div>
   )
 }
